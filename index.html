@@ -1,31 +1,38 @@
-<html>
-  <head>
+<html><head>
+    <meta encoding="utf-8">
     <style>
       body {
         background-color: #000000;
         color: #ffffff;
         font-family: 'Arial';
       }
-      nonresizable {
-        resize: none;
+      .do {
+          resize: none;
+      }
+      .od {
+          resize: none;
+      }
+      .dw {
+          resize: none;
+      }
+      .udw {
+          resize: none;
       }
     </style>
   </head>
   <body>
-    <meta encoding='utf-8' />
-    Do/To: <textarea class="nonresizable" id="do"></textarea><br>
-    Od/From: <textarea class="nonresizable" id="od"></textarea><br>
-    DW (opcjonalne/optional): <textarea class="nonresizable" id="dw"></textarea><br>
-    UDW (opcjonalne/optional): <textarea class="nonresizable" id="udw"></textarea><br>
+    Do/To: <textarea id="do"></textarea><br>
+    Od/From: <textarea id="od"></textarea><br>
+    DW (opcjonalne/optional): <textarea id="dw"></textarea><br>
+    UDW (opcjonalne/optional): <textarea id="udw"></textarea><br>
     Treść/Content: <textarea id="tresc"></textarea><br><br>
     <script>
       function clear() {
-        let elements = ["do", "dw", "udw", "tresc"]
-        for element in elements {
-          document.getElementById(element).value = ''
-        }
+        document.getElementById("do").value = ""
+        document.getElementById("dw").value = ""
+        document.getElementById("udw").value = ""
       }
     </script>
     <button onclick="clear()"><h3>Wyślij</h3></button>
-  </body>
-</html>
+  
+</body></html>
