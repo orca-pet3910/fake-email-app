@@ -1,6 +1,9 @@
-<html>
-  <head>
-    <meta encoding="utf-8">
+<!DOCTYPE html>
+<html lang="pl &amp; en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fake Email App/</title>
     <style>
       body {
         background-color: #000000;
@@ -8,25 +11,39 @@
         font-family: 'Arial';
       }
       /* Apply the resize rule to specific textareas by ID */
-      #do, #od, #dw, #udw {
+      #do, #od, #dw, #udw, #tresc {
         resize: none;
       }
+      button {
+        background-color: #333;
+        color: #fff;
+        border: 1px solid #444;
+        padding: 10px 20px;
+        cursor: pointer;
+        font-size: 16px;
+      }
+      button:hover {
+        background-color: #555;
+      }
     </style>
-  </head>
-  <body>
-    Do/To: <textarea id="do" rows=1></textarea><br>
-    Od/From: <textarea id="od" rows=1></textarea><br>
-    DW (opcjonalne/optional): <textarea id="dw" rows=1></textarea><br>
-    UDW (opcjonalne/optional): <textarea id="udw" rows=1></textarea><br>
+</head>
+<body>
+    Do/To: <textarea id="do" rows="1"></textarea><br>
+    Od/From: <textarea id="od" rows="1"></textarea><br>
+    DW (opcjonalne/optional): <textarea id="dw" rows="1"></textarea><br>
+    UDW (opcjonalne/optional): <textarea id="udw" rows="1"></textarea><br>
     Treść/Content: <br>
     <textarea id="tresc"></textarea><br><br>
+
+    <button onclick="clearFields()"><h3>Wyślij</h3></button>
+
     <script>
-      function clear() {
-        document.getElementById("do").value = ""
-        document.getElementById("dw").value = ""
-        document.getElementById("udw").value = ""
+      function clearFields() {
+        document.getElementById("do").value = "";
+        document.getElementById("dw").value = "";
+        document.getElementById("udw").value = "";
+        document.getElementById("tresc").value = "";
       }
     </script>
-    <button onclick="clear()"><h3>Wyślij</h3></button>
-  </body>
+</body>
 </html>
