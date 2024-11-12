@@ -1,0 +1,31 @@
+<html>
+  <head>
+    <style>
+      body {
+        background-color: #000000;
+        color: #ffffff;
+        font-family: 'Arial';
+      }
+      nonresizable {
+        resize: none;
+      }
+    </style>
+  </head>
+  <body>
+    <meta encoding='utf-8' />
+    Do: <textarea class="nonresizable" id="do"></textarea><br>
+    Od: <textarea class="nonresizable" id="od"></textarea><br>
+    DW (opcjonalne): <textarea class="nonresizable" id="dw"></textarea><br>
+    UDW (opcjonalne): <textarea class="nonresizable" id="udw"></textarea><br>
+    Treść: <textarea id="tresc"></textarea><br><br>
+    <script>
+      function clear() {
+        let elements = ["do", "dw", "udw", "tresc"]
+        for element in elements {
+          document.getElementById(element).value = ''
+        }
+      }
+    </script>
+    <button onclick="clear()"><h3>Wyślij</h3></button>
+  </body>
+</html>
