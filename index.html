@@ -1,4 +1,5 @@
-<html><head>
+<html>
+  <head>
     <meta encoding="utf-8">
     <style>
       body {
@@ -6,25 +7,17 @@
         color: #ffffff;
         font-family: 'Arial';
       }
-      .do {
-          resize: none;
-      }
-      .od {
-          resize: none;
-      }
-      .dw {
-          resize: none;
-      }
-      .udw {
-          resize: none;
+      /* Apply the resize rule to specific textareas by ID */
+      #do, #od, #dw, #udw {
+        resize: none;
       }
     </style>
   </head>
   <body>
-    Do/To: <textarea id="do"></textarea><br>
-    Od/From: <textarea id="od"></textarea><br>
-    DW (opcjonalne/optional): <textarea id="dw"></textarea><br>
-    UDW (opcjonalne/optional): <textarea id="udw"></textarea><br>
+    Do/To: <textarea id="do" rows=1></textarea><br>
+    Od/From: <textarea id="od" rows=1></textarea><br>
+    DW (opcjonalne/optional): <textarea id="dw" rows=1></textarea><br>
+    UDW (opcjonalne/optional): <textarea id="udw" rows=1></textarea><br>
     Treść/Content: <br>
     <textarea id="tresc"></textarea><br><br>
     <script>
@@ -35,5 +28,5 @@
       }
     </script>
     <button onclick="clear()"><h3>Wyślij</h3></button>
-  
-</body></html>
+  </body>
+</html>
