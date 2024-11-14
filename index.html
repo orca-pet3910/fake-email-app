@@ -10,7 +10,7 @@
         color: #ffffff;
         font-family: 'Arial';
       }
-      #do, #od, #dw, #udw {
+      #do, #od, #dw, #udw, #temat {
         resize: none;
       }
       button {
@@ -31,6 +31,7 @@
     Od/From: <textarea id="od" rows="1" cols="35"></textarea><br>
     DW (opcjonalne/optional): <textarea id="dw" rows="1" cols="50"></textarea><br>
     UDW (opcjonalne/optional): <textarea id="udw" rows="1" cols="50"></textarea><br>
+    Temat: <textarea id="temat" rows=1 cols=40></textarea><br>
     Treść/Content: <br>
     <textarea id="tresc" rows="10" columns="75"></textarea><br><br>
 
@@ -42,6 +43,7 @@
         document.getElementById("dw").value = "";
         document.getElementById("udw").value = "";
         document.getElementById("tresc").value = "";
+        document.getElementById("temat").value = "";
       }
     </script>
 </body>
